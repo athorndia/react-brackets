@@ -1,79 +1,33 @@
 {
   "name": "react-brackets",
-  "version": "0.4.7",
-  "description": "React component to render dynamic bracket UI",
-  "author": "mohux",
-  "license": "MIT",
-  "repository": "mohux/react-brackets",
-  "main": "dist/index.js",
-  "module": "dist/index.modern.js",
-  "source": "src/index.tsx",
-  "engines": {
-    "node": ">=10"
-  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "build": "microbundle-crl --no-compress --format modern,cjs",
-    "start": "microbundle-crl watch --no-compress --format modern,cjs",
-    "prepare": "run-s build",
-    "test": "run-s test:unit test:lint test:build",
-    "test:build": "run-s build",
-    "test:lint": "eslint './src/**/*.{ts,tsx}'",
-    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
-    "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "peerDependencies": {
-    "react": "^18.0.0",
-    "react-swipeable-views": "^0.13.9",
-    "styled-components": "^5.1.1"
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-brackets": "^0.4.7",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^6.5.0",
-    "@testing-library/react": "^16.0.1",
-    "@testing-library/user-event": "^14.5.2",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^22.5.2",
+    "@eslint/js": "^9.9.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
     "@types/react-swipeable-views": "^0.13.5",
     "@types/styled-components": "^5.1.34",
-    "@typescript-eslint/eslint-plugin": "^8.4.0",
-    "@typescript-eslint/parser": "^8.4.0",
-    "babel-eslint": "^10.1.0",
-    "cross-env": "^7.0.3",
+    "@vitejs/plugin-react-swc": "^3.7.0",
     "eslint": "^9.9.1",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-config-standard": "^17.1.0",
-    "eslint-config-standard-react": "^13.0.0",
-    "eslint-plugin-import": "^2.29.1",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-promise": "^7.1.0",
-    "eslint-plugin-react": "^7.35.1",
-    "eslint-plugin-standard": "^5.0.0",
-    "gh-pages": "^6.1.1",
-    "microbundle-crl": "^0.13.11",
-    "npm-run-all": "^4.1.5",
-    "prettier": "^3.3.3",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-scripts": "^5.0.1",
-    "typescript": "^5.5.4"
-  },
-  "files": [
-    "dist"
-  ],
-  "keywords": [
-    "react",
-    "brackets",
-    "react-brackets",
-    "tournaments",
-    "react-tournaments"
-  ],
-  "dependencies": {
-    "react-brackets": "^0.4.7",
+    "eslint-plugin-react-hooks": "^5.1.0-rc-fb9a90fa48-20240614",
+    "eslint-plugin-react-refresh": "^0.4.11",
+    "globals": "^15.9.0",
     "react-swipeable-views": "^0.14.0",
-    "styled-components": "^6.1.13"
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.4.0",
+    "vite": "^5.4.2"
   }
 }

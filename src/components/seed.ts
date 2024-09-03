@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { ISeedProps } from '../types/Seed';
+import styled from "styled-components";
+import { ISeedProps } from "../types/Seed";
 
 export const SeedItem = styled.div`
   color: #fff;
@@ -129,7 +129,7 @@ export const Seed = styled.div<ISeedProps>(
     &:nth-child(even)::after {
       border-bottom: 1px solid #707070;
       top: -0.5px;
-     [dir="rtl"] & {
+      [dir="rtl"] & {
         border-left: 1px solid #707070;
         }
       [dir="ltr"] & {
